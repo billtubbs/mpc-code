@@ -1,4 +1,4 @@
-
+% Speed tests of calcEF1.m and calcEF2.m
 
 
 %% 1-state SISO State space model

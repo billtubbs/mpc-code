@@ -1,8 +1,8 @@
-% Test solve_mpc_SISO
+% Test solve_mpc_MIMO.m
 
-clear all; clc
+clear all
 
-%% Random multivariable state-space model
+% Random multivariable state-space model
 
 rng(0)
 n = 5; ny = 2; nu = 3;
@@ -58,7 +58,7 @@ u_sim = [U; repmat(U(end,:), Hp-Hc+1, 1)];
 [y_sim, t, x_sim] = lsim(sys, u_sim, k_sim, xk);
 
 
-%% Plot reference, predicted and simulated output
+% Plot reference, predicted and simulated output
 R_sim = [zeros(1,ny); reshape(R, [ny, Hp])'];
 y_pred_sim = [zeros(1,ny); reshape(y_pred, [ny, Hp])'];
 

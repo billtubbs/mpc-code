@@ -1,9 +1,9 @@
 % Test solve_mpc_SISO
 
-clear all; clc
+clear all
 rng(0)
 
-%% Multi-variable SISO State space model
+% Multi-variable SISO State space model
 
 % Example from GEL-7029 exercise 13.1
 % See also predmat_methods.m
@@ -60,7 +60,8 @@ k_sim = (0:Hp)';
 u_sim = [uk; repmat(uk(end), Hp-Hc+1, 1)];
 [y_sim, t, x_sim] = lsim(sys, u_sim, k_sim, xk);
 
-%% Plot reference, predicted and simulated output
+% Plot reference, predicted and simulated output
+
 R_sim = [0; R];
 y_pred_sim = [0; y_pred];
 
