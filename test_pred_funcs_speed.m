@@ -1,4 +1,4 @@
-%% Speed tests
+% Speed tests of prediction functions
 
 n = 14; ny = 3; nu = 6;
 sys = drss(n,ny,nu);
@@ -8,6 +8,7 @@ C = sys.C;
 D = sys.D;
 
 Hp = 30; Hc = 2;
+
 
 %% Calculation of E matrix
 
