@@ -20,7 +20,7 @@ Hc = 1;
 lambda = 0.1;
 
 % Solve diophantine equations
-[F, M] = Diophantine_equation(C,D,Hp)
+[F, M] = diophantine_recursive(C,D,Hp)
 
 % Prepare G matrix
 G = tril(B*toeplitz(F(Hp,:)));
