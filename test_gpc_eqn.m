@@ -98,7 +98,7 @@ y_test = [
 assert(all(abs(y_test - sim_data.y) < 1e-4))
 
 
-%% Simulation and plotting functions
+% Simulation and plotting functions
 
 function results = simulate(nT,a,b,c,d,Hp,lambda,M,G,K1,Vq,eint)
     % nT : number of timesteps

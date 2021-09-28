@@ -4,7 +4,7 @@ function [M, G2, K1] = gpc_arrays(A, B, C, D, Hp, Hc, lambda)
 % See script test_gpc_eqn.m for usage.
 
     % Solve diophantine equations
-    [F, M] = Diophantine_equation(C,D,Hp)
+    [F, M] = diophantine_recursive(C,D,Hp)
 
     % Prepare G matrix
     G = tril(B*toeplitz(F(Hp,:)));
